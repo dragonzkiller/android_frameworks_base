@@ -76,7 +76,7 @@ public class PackageHelper {
             if (localLOGV)
                 Log.i(TAG, "Size of container " + sizeMb + " MB");
 
-            int rc = mountService.createSecureContainer(cid, sizeMb, "ext4", sdEncKey, uid,
+            int rc = mountService.createSecureContainer(cid, sizeMb, "fat", sdEncKey, uid,
                     isExternal);
             if (rc != StorageResultCode.OperationSucceeded) {
                 Log.e(TAG, "Failed to create secure container " + cid);
